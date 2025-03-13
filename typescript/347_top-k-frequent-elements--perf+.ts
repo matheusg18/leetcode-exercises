@@ -4,12 +4,12 @@ import assert from 'assert';
 import { describe, it } from 'node:test';
 
 /*
-  * build a frequency map;
-  * create an array with a length of nums.length size + 1, where each element is initially an empty array
+  - build a frequency map;
+  - create an array with a length of nums.length size + 1, where each element is initially an empty array
     (this array will be used for bucket sorting, the index will be the frequency number and
     it's content, the number itself, eg: [1, 1, 2, 2, 4] => [[], [4], [1, 2], [], []]);
-  * populate the grouping array;
-  * loop through the array in reverse order to collect the top k frequent.
+  - populate the grouping array;
+  - loop through the array in reverse order to collect the top k frequent.
 */
 function topKFrequent(nums: number[], k: number): number[] {
   const frequencyMap = buildfrequencyMap(nums);
